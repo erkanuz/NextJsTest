@@ -1,0 +1,134 @@
+.main {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  padding: .5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../public/background.png');
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.titles {
+  display: grid;
+  place-items: center;
+  font-size: x-large;
+  gap: .5rem;
+}
+
+.grid_content {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  place-items: center;
+  width: 1024px;
+}
+
+.image {
+  border-radius: .5rem;
+  position: relative;
+  width: auto; height: auto;
+}
+
+.boxes {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: .5rem 1rem .5rem 1.5rem;
+  border-radius: 12px;
+  background: rgba(215, 208, 208, 0.5);
+  border: 2px solid rgba(131, 134, 135, 0);
+}
+
+.card h2 {
+  font-weight: 600;
+}
+
+.card p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+}
+
+.card_icon {
+  font-size: 50px;
+}
+
+.line {
+  position: relative;
+}
+
+.line:after {
+  content: "";
+  background: rgba(2, 69, 251, .5);
+  height: 3px; width: 0%;
+  position: absolute;
+  left: 0; bottom: -0;
+  border-radius: 0.75rem;
+  transition-duration: 500ms;
+}
+
+.line:hover:after {
+  width: 100%;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(100, 100, 100, 0.5);
+    border: 2px solid rgba(2, 69, 251, .5);
+  }
+
+  .card:hover h2 {
+    color: rgba(2, 69, 251, .5);
+  }
+}
+
+@media (max-width: 640px) {
+  .titles h1 {
+    font-size: 1.8rem;
+  }
+  .titles p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 912px) {
+  .grid_content {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .titles {
+    height: 70px;
+  }
+
+  .card {
+    width: 450px;
+  }
+  .grid_content{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1025px) {
+  .image {
+    width: 400px; height: 600px;
+  }
+}
