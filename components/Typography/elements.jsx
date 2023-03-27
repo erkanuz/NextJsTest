@@ -12,13 +12,13 @@ export const StyledSectionTitles = styled.div`
     }
 `;
 
-export const StyledSectionTitle = styled(forwardRef((props, ref) => <h1 {...props} ref={ref}>Managed agency selection</h1>))`
+export const StyledSectionTitle = styled(forwardRef((props, ref) => <h1 {...props} ref={ref} />))`
   @media (max-width: 640px) {
       font-size: 1.8rem;
   }
 `;
  
-export const StyledSectionSubTitle = styled(forwardRef((props, ref) => <p {...props} ref={ref}>Strengthen your onboarding process</p>))`
+export const StyledSectionSubTitle = styled(forwardRef((props, ref) => <p {...props} ref={ref} />))`
 @media (max-width: 640px) {
   font-size: 1.2rem;
 }

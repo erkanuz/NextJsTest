@@ -14,3 +14,15 @@ export const StyledSectionContainer = styled.div`
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 `;
+
+export const StyledSectionMain = styled.div`
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+    padding: .5rem;
+    position: relative;
+`;
