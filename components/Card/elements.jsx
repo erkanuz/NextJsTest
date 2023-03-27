@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import styled from "styled-components";
 
 export const StyledCard = styled.div`
